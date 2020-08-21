@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
   template: `
     <p>
-      {{ random }}
+     <button>{{ value }}</button>
     </p>
   `,
   styles: [
@@ -12,6 +12,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SquareComponent {
 
-random = Math.random();
+  @Input()  value: 'X' | 'O';
 
 }
